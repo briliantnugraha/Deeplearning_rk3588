@@ -33,9 +33,10 @@ YOLO-V8 -> TBD
 ```
 
 ## Demo and Screenshot Results
-<video controls="true" allowfullscreen="true">
-    <source src="./demo_video.mp4" type="video/mp4">
-  </video>
+
+https://github.com/briliantnugraha/Deeplearning_rk3588/assets/9381132/94ac511d-03b3-4b27-a822-c9326a096a36
+
+
 
 |Original|Detection|
 |---|---|
