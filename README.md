@@ -6,10 +6,13 @@
 Hi,
 In here, I am planning to share the journey of using rknn model with Rockchip SBC.
 In my case, I use 4GB (cheapest RK3588s on the market) version of Orange pi 5.
-I will consider to add rknn-toolkit 1.5 installation (which is very simple TBH).
 ```
 
-## YOLOV5 - YOLOX
+## Inference Progress
+
+- [x] Integrate RKNN/RKNPU2 with yolov5 with webcam support.
+- [x] Integrate RKNN/RKNPU2 with yolox.
+- [ ] Integrate RKNN/RKNPU2 with yolov8.
 
 ---
 
@@ -17,7 +20,11 @@ I will consider to add rknn-toolkit 1.5 installation (which is very simple TBH).
 
 1. Clone the repository.
 2. Do Inference:
-  * YOLOV5 - Do inference with Images folder's contents `python3 yolov5_run.py`
+  * YOLOV5 - Do inference with Images folder's contents
+```
+cd yolov5
+python3 yolov5_run.py
+```
   * YOLOX - Do inference with Images folder's contents (Download ONNX Model in [here](https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_s.onnx))
 ```
 cd yolox
