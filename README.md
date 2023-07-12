@@ -12,7 +12,7 @@ In my case, I use 4GB (cheapest RK3588s on the market) version of Orange pi 5.
 
 - [x] Integrate RKNN/RKNPU2 with yolov5 with webcam support.
 - [x] Integrate RKNN/RKNPU2 with yolox.
-- [ ] Integrate RKNN/RKNPU2 with yolov8.
+- [x] Integrate RKNN/RKNPU2 with yolov8 (still need to fix bbox fitting + static score).
 
 ---
 
@@ -30,6 +30,11 @@ python3 yolov5_run.py
 cd yolox
 ONNXRuntime -> python3 yolox_run.py --model ../models/yolox_s.onnx --image_path ../Images/  --input_shape 640,640
 RKNN -> python3 yolox_run_rknn.py --model ../models/yolox_s.rknn --image_path ../Images/  --input_shape 640,640
+```
+  * YOLOV8 - Do inference with Images folder's contents as the following:
+```
+cd yolov8
+python3 yolov8_run_rknn.py -st 0.5 -nt 0.4 -mp ../models/yolov8s_sim2.rknn -fp ../Images/ 
 ```
 3. You can also add customized images, put it on the "Images" folder, and run step 2 again (image outputs will not be put into the inference pipeline, so no need to delete it).
 4. Do inference with webcam
