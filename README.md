@@ -28,8 +28,8 @@ python3 yolov5_run.py
   * YOLOX - Do inference with Images folder's contents (Download ONNX Model in [here](https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_s.onnx))
 ```
 cd yolox
-ONNXRuntime -> python3 yolox_run.py --model ../models/yolox_s.rknn --image_path Images/ --output_dir Images/ --input_shape 640,640
-RKNN -> python3 yolox_run_rknn.py --model ../models/yolox_s.rknn --image_path Images/ --output_dir Images/ --input_shape 640,640
+ONNXRuntime -> python3 yolox_run.py --model ../models/yolox_s.onnx --image_path ../Images/  --input_shape 640,640
+RKNN -> python3 yolox_run_rknn.py --model ../models/yolox_s.rknn --image_path ../Images/  --input_shape 640,640
 ```
 3. You can also add customized images, put it on the "Images" folder, and run step 2 again (image outputs will not be put into the inference pipeline, so no need to delete it).
 4. Do inference with webcam
