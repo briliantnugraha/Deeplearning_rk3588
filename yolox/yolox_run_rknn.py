@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) Megvii, Inc. and its affiliates.
-# python3 yolox_run.py --model yolox_tiny.onnx --image_path Images/ --output_dir Images/
+# python3 yolox_run.py --model yolox_tiny.onnx --image_path Images/
 
 import argparse
 import os
@@ -34,13 +34,6 @@ def make_parser():
         type=str,
         default='test_image.png',
         help="Path to your input image.",
-    )
-    parser.add_argument(
-        "-o",
-        "--output_dir",
-        type=str,
-        default='demo_output',
-        help="Path to your output directory.",
     )
     parser.add_argument(
         "-s",
@@ -96,10 +89,9 @@ if __name__ == '__main__':
     else:
         print('Init runtime ENV success!')
 
-    print('load model and img list finish.')
-    os.makedirs(args.output_dir, exist_ok=True)
+    print('load model and img list finish.', len(imglist))
     timelist = []
-    for _ in range(100):
+    for _ in range(1):
         for i in range(len(imglist)):
             origin_img = cv2.imread(imglist[i])
             '''PREPROCESS'''
@@ -123,7 +115,7 @@ if __name__ == '__main__':
                 final_boxes, final_scores, final_cls_inds = dets[:, :4], dets[:, 4], dets[:, 5]
                 origin_img = vis(origin_img, final_boxes, final_scores, final_cls_inds,
                                 conf=args.score_thr, class_names=COCO_CLASSES)
-            cv2.imwrite(imglist[i].replace('.', '_out.'), origin_img)
+            cv2.imwrite(imglist[i]+'_rknn.jpg', origin_img)
 
     
     print('Avg runtime: {:.3f}s'.format(np.mean(timelist[1:])))

@@ -108,7 +108,7 @@ if __name__ == '__main__':
             final_boxes, final_scores, final_cls_inds = dets[:, :4], dets[:, 4], dets[:, 5]
             origin_img = vis(origin_img, final_boxes, final_scores, final_cls_inds,
                             conf=args.score_thr, class_names=COCO_CLASSES)
-        cv2.imwrite(imglist[i].replace('.', '_out.'), origin_img)
+        cv2.imwrite(imglist[i]+'_onnx.jpg', origin_img)
 
     
     print('Avg runtime: {:.3f}s'.format(np.mean(timelist[1:])))

@@ -5,7 +5,7 @@ from yolov5_run import Yolov5, draw_output
 import cv2
 
 model = Yolov5()
-modelpath = 'models/yolov5s.rknn'
+modelpath = '../models/yolov5s.rknn'
 model._load_model(modelpath)
 
 fourcc = cv2.VideoWriter_fourcc(*'MP4V')

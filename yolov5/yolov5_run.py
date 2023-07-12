@@ -112,10 +112,10 @@ class Yolov5():
 
 if __name__ == '__main__':
     model = Yolov5()
-    modelpath = 'models/yolov5s.rknn'
+    modelpath = '../models/yolov5s.rknn'
     model._load_model(modelpath)
     
-    basepath = 'Images'
+    basepath = '../Images'
     imglist = [os.path.join(basepath, bp) for bp in os.listdir(basepath) if '_out.' not in bp]
     for impath in imglist: 
         img = cv2.cvtColor(cv2.imread(impath), cv2.COLOR_BGR2RGB)
@@ -132,5 +132,5 @@ if __name__ == '__main__':
             print('scores: ', len(scores), scores[:10])
             print('='*30)
         image = draw_output(img, boxes, classes, scores)
-        cv2.imwrite(impath.replace('.', '_out.'), image[...,::-1])
+        cv2.imwrite(impath+'_out.jpg', image[...,::-1])
     print('avg time: ', np.array(timelist[2:]).mean(0))
