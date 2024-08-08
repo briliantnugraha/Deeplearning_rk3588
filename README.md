@@ -13,6 +13,7 @@ In my case, I use 4GB (cheapest RK3588s on the market) version of Orange pi 5.
 - [x] Integrate RKNN/RKNPU2 with yolov5 with webcam support.
 - [x] Integrate RKNN/RKNPU2 with yolox.
 - [x] Integrate RKNN/RKNPU2 with yolov8 (still need to fix bbox fitting + static score).
+- [x] Integrate RKNN/RKNPU2 with yolov10 (super easy to convert and get correct output out of the box).
 
 ---
 
