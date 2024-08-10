@@ -1,8 +1,10 @@
 ## YOLO on Rockchip
 
-* In here, the aim is to provide an easier way to convert, and run yolo family models on rockchip devices.
-* The code are derived heavily from rknn-toolkit2, simplified, and unified for user-friendly inference.
-* Big news, the latest rknn-toolkit2 could work with newer yolo family (yolov5, v8, v10 etc). With the latest rknn-toolkit2 engine, we could convert the models with less hassle.
+* In here, the humble aim is to provide an easier way to convert, and run yolo family models on rockchip devices.
+* I believe that many rockchip users out there are frustrated (including me) when developing ML/AI models on these devices.
+* Hence, my short term goal might be to help me, and everyone who're interested on deeplearning inference on these devices to enjoy easier developing processes.
+* FYI, The yolo postprocess code are derived heavily from rknn-toolkit2, simplified, and unified for user-friendly inference.
+* Also FYI, the latest rknn-toolkit2 (2.1.0) could work with newer yolo family (yolov5, v8, v10 etc). with less/no changes to the original onnx models, hence giving us a "simpler" converting experience.
 
 ## Supported YOLO MODELS
 
