@@ -33,7 +33,7 @@ def get_argument():
     parser.add_argument(
         "--core",
         type=str,
-        default=RKNNLite.NPU_CORE_0,
+        default=RKNNLite.NPU_CORE_AUTO,
         help="RKNNLite.NPU_CORE_0 | RKNNLite.NPU_CORE_AUTO, etc",
     )
 

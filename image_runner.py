@@ -24,7 +24,7 @@ if __name__ == '__main__':
     # img_ = cv2.cvtColor(img_, cv2.COLOR_BGR2RGB)
     
     for i in range(100):
-        randpath = np.random.choice(['Images/im1.jpg', 'Images/im2.png', 'Images/traffic.jpg', 'Images/bus.jpg', 'Images/groceries.jpg'])
+        randpath = np.random.choice(['Images/im1.jpg', 'Images/im2.png', 'Images/traffic.jpg', 'Images/bus.jpg', 'Images/truck.jpg'])
         # randpath = 'Images/bus.jpg'
         img_ = cv2.imread(randpath)
         img_ = cv2.cvtColor(img_, cv2.COLOR_BGR2RGB)
